@@ -1,34 +1,12 @@
-Window.GetMaxWidth = fun () {
-	i = 0;
-	width = 0;
-	while (Window.GetWidth(i)) {
-		width = Math.Max(width, Window.GetWidth(i));
-		i++;
-	}
-	return width;
-};
-
-Window.GetMaxHeight = fun () {
-	i = 0;
-	height = 0;
-	while (Window.GetHeight(i)) {
-		height = Math.Max(height, Window.GetHeight(i));
-		i++;
-	}
-	return height;
-};
-
 // Screen size
 screen.w = Window.GetWidth();
 screen.h = Window.GetHeight();
 screen.half.w = Window.GetWidth() / 2;
 screen.half.h = Window.GetHeight() / 2;
 
-// background
-//Window.SetBackgroundTopColor (0.23, 0.63, 0.79);     # Nice colour on top of the screen fading to
-//Window.SetBackgroundBottomColor (23.0, 63.0, 79.0);     # Nice colour on top of the screen fading to
+// Background
 background.original_image = ImageNew("background.png");
-background.image = background.original_image.Scale(Window.GetMaxWidth() , Window.GetMaxHeight());
+background.image = background.original_image.Scale(Window.GetWidth() , Window.GetHeight());
 background.sprite = SpriteNew();
 background.sprite.SetImage(background.image);
 background.sprite.SetPosition(0, 0, 0);
