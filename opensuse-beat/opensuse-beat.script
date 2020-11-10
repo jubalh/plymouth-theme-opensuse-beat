@@ -24,7 +24,7 @@ logo.sprite = Sprite();
 loading.image = Image("progress.png");
 loading.originalImage = Image("progress.png");
 loading.sprite = Sprite();
-loading.sprite.SetY(screen.h - 1);
+loading.sprite.SetY(screen.h - loading.originalImage.GetHeight());
 loading.sprite.SetX(0);
 
 // Question prompt
@@ -69,7 +69,7 @@ fun RefreshCallback() {
     logo.sprite.SetY(screen.half.h - logo.image.GetHeight() / 2);
     logo.sprite.SetOpacity(opacity);
 
-    loading.image = loading.originalImage.Scale(global.progress * screen.w, 1);
+    loading.image = loading.originalImage.Scale(global.progress * screen.w, loading.originalImage.GetWidth());
     loading.sprite.SetImage(loading.image);
 }
 Plymouth.SetRefreshFunction(RefreshCallback);
