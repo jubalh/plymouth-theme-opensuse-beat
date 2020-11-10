@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=OpenSUSE Beat
+Description=OpenSUSE Beat Plymouth Theme
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/opensuse-beat
+ScriptFile=/usr/share/plymouth/themes/opensuse-beat/opensuse-beat.script
