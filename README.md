@@ -9,8 +9,8 @@ This is a Plymouth Theme for openSUSE. Inspired by the nice [arch-beat](https://
 ## Installation
 
 ```
-git clone https://github.com/jubalh/opensuse-beat
-sudo cp -R opensuse /usr/share/plymouth/themes
+git clone https://github.com/jubalh/plymouth-theme-opensuse-beat
+sudo cp -R opensuse-beat /usr/share/plymouth/themes
 plymouth-set-default-theme -R opensuse-beat
 ```
 
